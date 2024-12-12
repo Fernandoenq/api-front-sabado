@@ -33,7 +33,7 @@ const Cadastro = () => {
       PersonName: "Alguem", // Valor fixo para o nome
       Cpf: "44134412811", // Valor fixo para o CPF
       Phone: "5511999999999", // Valor fixo para o telefone
-      BirthDate: "01/01/2000", // Valor fixo para a data de nascimento
+      BirthDate: new Date().toISOString().split('T')[0], // Valor fixo para a data de nascimento
       Mail: "default@example.com", // Valor fixo para o e-mail
       HasAcceptedParticipation: true, // Valor fixo indicando aceitação dos termos
       ImageIds: numbersFromUrl.map((num) => `${num}.png`),
