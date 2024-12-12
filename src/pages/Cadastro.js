@@ -59,7 +59,7 @@ const Cadastro = () => {
         a.click();
         window.URL.revokeObjectURL(url);
 
-        setAlert({ message: 'Cadastro enviado e imagem baixada com sucesso!', type: 'success' });
+        setAlert({ message: 'Imagem baixada com sucesso!', type: 'success' });
       } else if (response.status === 422) {
         const errorData = await response.json();
         const errorMessage = errorData.Errors ? errorData.Errors.join(', ') : 'Erro desconhecido';
