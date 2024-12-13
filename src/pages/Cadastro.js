@@ -158,10 +158,11 @@ const Cadastro = () => {
               className={`submit-button ${isButtonEnabled ? 'enabled' : 'disabled'}`}
               disabled={!isButtonEnabled} // Botão desativado se os campos forem inválidos
             >
-              BAIXAR {number}
+              BAIXAR {index + 1} {/* Sequência separada usando o índice do map */}
             </button>
           </form>
         ))}
+
 
 
         {alert.message && (
