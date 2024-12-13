@@ -4,6 +4,22 @@
 
 /* Estilos Gerais */
 
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaçamento vertical entre os campos */
+}
+
+.input-group {
+  margin-bottom: 10px; /* Margem inferior adicional para cada campo */
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
   
 .container {
@@ -104,6 +120,22 @@
   .submit-button:hover {
     background-color: #2b6cb0;
   }
+  
+  .submit-button.enabled {
+    background-color: #3182ce; /* Verde para botão ativo */
+    color: black; /* Texto branco para melhor contraste */
+  }
+  
+  .submit-button.disabled {
+    background-color: #a0aec0; /* Cinza claro para botão desativado */
+    color: #718096; /* Texto cinza escuro */
+    cursor: not-allowed; /* Indica que o botão não pode ser clicado */
+  }
+  
+  .submit-button.disabled:hover {
+    background-color: #a0aec0; /* Impede a mudança de cor no hover do botão desativado */
+  }
+  
 
 
   /* Overlay para o loading */
