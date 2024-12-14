@@ -83,9 +83,17 @@ const Cadastro = () => {
       if (response.ok) {
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
+
+        // Obtendo o horário atual formatado
+        const currentTime = new Date();
+        const formattedTime = currentTime
+          .toISOString()
+          .replace(/[-:T]/g, '') // Remove caracteres indesejados
+          .split('.')[0]; // Remove milissegundos
+
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${number}.png`;
+        a.download = `imagem_${formattedTime}.png`;
         a.click();
         window.URL.revokeObjectURL(url);
 
