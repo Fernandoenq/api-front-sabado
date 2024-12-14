@@ -1,5 +1,14 @@
 /* Cadastro.css */
 
+.button-list {
+  max-height: 180px; /* Define a altura máxima da lista */
+  overflow-y: auto; /* Adiciona rolagem vertical */
+  padding: 10px; /* Espaçamento interno para os botões */
+  margin-top: 20px; /* Espaçamento da lista em relação aos outros componentes */
+  border: 1px solid #ccc; /* Bordas opcionais para destacar a área */
+  border-radius: 8px; /* Deixa os cantos arredondados */
+}
+
 
 
 /* Estilos Gerais */

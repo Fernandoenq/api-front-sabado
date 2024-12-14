@@ -147,21 +147,24 @@ const Cadastro = () => {
           </div>
         </div>
 
-        {numbersFromUrl.map((number, index) => (
-          <form
-            key={index}
-            onSubmit={(e) => handleSubmit(e, number)}
-            className="space-y-6 form-block"
-          >
-            <button
-              type="submit"
-              className={`submit-button ${isButtonEnabled ? 'enabled' : 'disabled'}`}
-              disabled={!isButtonEnabled} // Botão desativado se os campos forem inválidos
+        <div className="button-list">
+          {numbersFromUrl.map((number, index) => (
+            <form
+              key={index}
+              onSubmit={(e) => handleSubmit(e, number)}
+              className="space-y-6 form-block"
             >
-              BAIXAR {index + 1} {/* Sequência separada usando o índice do map */}
-            </button>
-          </form>
-        ))}
+              <button
+                type="submit"
+                className={`submit-button ${isButtonEnabled ? 'enabled' : 'disabled'}`}
+                disabled={!isButtonEnabled} // Botão desativado se os campos forem inválidos
+              >
+                BAIXAR {index + 1} {/* Sequência separada usando o índice do map */}
+              </button>
+            </form>
+          ))}
+        </div>
+
 
 
 
